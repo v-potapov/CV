@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
 	"directory" : "app/libs/"
 }
+=======
+	"directory" : "libs"
+}
+>>>>>>> 730b6d7efac720b45d592fba824b662ee62dfd98
