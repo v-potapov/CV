@@ -15,27 +15,30 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: $dk-grey
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: $dk-grey
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: $dk-grey
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: $dk-grey
 	opacity: 1
+
+*
+	color: $dk-dk-grey
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $dk-grey
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: $dk-grey
 
 html, body
 	height: 100%
@@ -59,35 +62,101 @@ body
 h1, h2, h3, h4, h5, p
 	margin: 0
 
+h3, h4, h5
+	font-weight: 600
+
 p
 	line-height: 175%
-	margin-top: .67em
+	margin-top: .3em
 	.bold
 		font-weight: 600
+	i
+		margin-right: 10px
 
+.lg-lg-grey-bg
+	background-color: $lg-lg-grey
+.lg-grey-bg
+	background-color: $lg-grey
 
-.light-grey-bg
-	background-color: $light-color
-	padding: 40px
 .container
-	display: flex
-	justify-content: center
-	padding: 20px
+	width: 100%
+	padding: 40px
 	.block
-		display: flex
+		display: grid
+		grid-template-columns: minmax(200px, 280px) minmax(360px, auto)
+		margin: 0 auto
 		width: 100%
-		max-width: 960px
-		// padding: 20px
-		.my-photo
-			background-color: grey
-			width: 200px
-			height: 200px
-			align-items: stretch
+		max-width: 1024px
+		.side-block
+			position: relative
+			padding-right: 40px
+			&:before
+				top: 0
+				right: 0
+				content: ""
+				position: absolute
+				width: 1px
+				height: 100%
+				background-color: $dk-grey
+			&.header
+				&:before
+					display: none
+			.paragraph-block
+				
+				//хз хз
+				position: sticky
+				&:first-child
+					margin-top: 8px
+				h3
+					margin-bottom: 30px
+
+			img
+				display: block
+				width: 100%
+			h3
+				margin-top: .35em
 		.txt-block
-			flex-grow: 1
 			margin-left: 40px
-		.text
-			margin-left: 0
+		.paragraph-block
+			margin-top: 30px
+			margin-bottom: 30px
+			position: relative
+			&.line
+				&:after
+					content: ""
+					position: absolute
+					top: 15px
+					left: -40px
+					width: 20px
+					height: 1px
+					background-color: $dk-grey
+			&:first-child
+				margin-top: 15px
+
+			// &:last-child
+			// 	margin-bottom: 30px
+		.chapter-block
+			margin-top: 60px
+			margin-bottom: 60px
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+
+.sm-link
+	margin: 20px 0
+	a
+		position: relative
+		display: inline-block
+		opacity: .7
+		transition: .3s
+		&:hover
+			opacity: 1
+
+		font-size: 30px
+		margin-right: 20px
+		i
+
 
 
 
