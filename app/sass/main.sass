@@ -71,17 +71,32 @@ h2
 	&:before
 		content: ""
 		position: absolute
-		bottom: -2px
+		bottom: -6px
 		left: 0
-		width: 100%
+		width: 60px
 		height: 2px
 		background-color: $accent
 
 a
+	position: relative
 	text-decoration: none
-	transition: .3s
+	transition: .2s
 	&:hover
 		color: $accent
+	&.text-link
+		color: $accent
+		&:before
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 2px
+			width: 0
+			height: 1px
+			background-color: $accent
+			transition: .2s
+		&:hover
+			&:before
+				width: calc(100% - 2px)
 
 p
 	line-height: 175%
@@ -144,15 +159,15 @@ p
 				display: inline-block
 				position: relative
 				margin-top: 30px
-				margin-bottom: 30px
+				margin-bottom: 20px
 				&:first-child
 					margin-top: 0
 				&:before
 					content: ""
 					position: absolute
-					bottom: -4px
+					bottom: -8px
 					left: 0
-					width: 100%
+					width: 60px
 					height: 2px
 					background-color: $accent
 		.txt-block
@@ -183,6 +198,7 @@ p
 				&:hover
 					&:after
 						transform: scale(2)
+						box-shadow: 0px 0px 0 4px rgba(#FF000F, .2)
 			&:first-child
 				margin-top: 8px
 
@@ -199,35 +215,35 @@ p
 	a
 		position: relative
 		display: inline-block
-		filter: grayscale(1)
-		transition: .3s
-		#ln
-			color: #0077b5
-		#fb
-			color: #4267B2
-		#be
-			color: #053eff
-		#dr
-			color: #ea4c89
+		#ln, #fb, #be, #dr
+			transition: .3s
+		&:hover
+			#ln
+				color: #0077b5
+			#fb
+				color: #4267B2
+			#be
+				color: #053eff
+			#dr
+				color: #ea4c89
 		i
 			font-size: 30px
 			margin-right: 20px
-		&:hover
-			filter: grayscale(0)
 
 .tag
 	display: inline-block
 	padding: 3px 10px
 	font-size: 14px
-	color: #fff
-	background-color: $accent
+	color: $dk-dk-grey
+	border: solid 1px $dk-dk-grey
 	border-radius: 5px
 	margin-right: 6px
 	line-height: 1.5
-	filter: grayscale(1)
 	transition: .2s
 	&:hover
-		filter: grayscale(0)
+		border: solid 1px $accent
+		color: $accent
+		box-shadow: 0px 0px 0 4px rgba(#FF000F, .2)
 
 
 ::selection
