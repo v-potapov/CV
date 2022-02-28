@@ -81,7 +81,7 @@ a
 		width: 0
 		height: 1px
 		background-color: $accent
-		transition: .3s
+		transition: .2s
 	&:hover
 		&:before
 			width: 100%
@@ -108,8 +108,8 @@ a
 		grid-column-end: 3
 		grid-row-start: 1
 		grid-row-end: 2
-		grid-template-rows: min-content min-content
-		grid-column-gap: 30px
+		align-self: flex-end
+		grid-column-gap: 20px
 		.headeer-block_header_text-block__text
 			height: fit-content
 			p
@@ -133,18 +133,21 @@ a
 					transform: translateY(6px) rotate(180deg)
 		.sm-block
 			grid-column-start: 2
-			margin: auto auto 0
+			// margin: auto auto 0
 			display: grid
 			grid-gap: 30px
 			grid-template-rows: repeat(4, max-content)
 			height: fit-content
+			align-self: flex-end
+			margin-bottom: 6px
 			a
 				height: 35px
 				opacity: .5
-				transition: .3s
+				transition: .2s
 				&:hover
 					opacity: 1
 					box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5)
+					transform: translateY(-1px)
 				&::before
 					display: none
 				i
@@ -176,18 +179,30 @@ a
 				width: 100%
 			.chapter-block
 				margin-top: 20px
+				.year-title
+					position: relative
+					color: $dk-grey
+					display: inline-block
+					font-size: 20px
+					font-weight: 700
+					transition: .2s
+					&:before
+						content: ""
+						position: absolute
+						width: 0
+						height: 2px
+						left: 0
+						bottom: 2px
+						background-color: $accent
+						transition: .2s
 				&:hover
 					.year-title
 						color: $accent
-						transition: .3s
+						&:before
+							width: 100%
 				h3
 					display: inline-block
 					margin-right: 20px
-				.year-title
-					display: inline-block
-					opacity: .6
-					font-size: 20px
-					font-weight: 700
 				p
 					margin-top: 10px
 
@@ -207,7 +222,7 @@ a
 
 				a
 					color: $dk-dk-grey
-					transition: .3s
+					transition: .2s
 					&:before
 						display: none
 				i
@@ -215,16 +230,31 @@ a
 					font-size: 20px
 					color: $dk-grey
 					transform: translateY(2px)
-					transition: .3s
+					transition: .2s
 				&:hover
 					i
 						color: $accent
 					a
 						color: $accent
 			p
+				position: relative
 				font-weight: normal
 				margin-top: 10px
-
+				transition: .2s
+				&:before
+					content: ""
+					position: absolute
+					width: 0
+					height: 2px
+					top: 12px
+					left: -15px
+					background-color: $accent
+					border-radius: 4px
+				&:hover
+					margin-left: 15px
+					color: $accent
+					&:before
+						width: 8px
 		a
 			&.btn
 				display: inline-block
@@ -238,7 +268,7 @@ a
 				background-color: $accent
 				border-radius: 100px
 				box-shadow: 0px 4px 30px rgba(255, 0, 15, 0.2)
-				transition: .3s
+				transition: .2s
 				&:hover
 					box-shadow: 0px 4px 30px rgba(255, 0, 15, 0.4)
 					transform: translateY(-1px)
@@ -249,8 +279,6 @@ a
 					margin-right: 15px
 					font-size: 20px
 					transform: translateY(2px)
-
-
 
 
 ::selection
