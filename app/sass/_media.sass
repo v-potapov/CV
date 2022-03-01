@@ -16,7 +16,7 @@
 
     .headeer-block_header__text-block
       grid-template-columns: min-content
-      grid-auto-rows: repeat (2, min-content)
+      grid-auto-rows: repeat(2, min-content)
       grid-row-gap: 10px
       margin-top: 40px
       margin-bottom: 20px
@@ -66,8 +66,8 @@
       grid-row-end: 3
     .side-ext-bar
       display: grid
-      grid-template-columns: repeat (2, 1fr)
-      grid-template-rows: repeat (4, min-content)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(4, min-content)
       margin-top: 0
       padding: 40px
       grid-row-start: 4
@@ -97,3 +97,9 @@
           margin-top: 0
         &.lg-desktop
           display: none
+
+@media only screen and (max-width : 640px)
+  .main-grid
+    .side-ext-bar
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(5, min-content)
