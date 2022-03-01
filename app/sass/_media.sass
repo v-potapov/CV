@@ -4,21 +4,26 @@
 @media only screen and (max-width : 992px)
   .main-grid
     grid-template-columns: 20px 1fr 20px
-    grid-template-rows: 860px auto
+    grid-template-rows: repeat(4, min-content)
     grid-column-gap: 20px
     grid-row-gap: 20px
     .headeer-block__header
       grid-column-start: 1
       grid-column-end: 4
-    .headeer-block_header__text-block
+      grid-row-start: 1
+      grid-row-end: 3
+      height: calc(100% - 200px)
 
+    .headeer-block_header__text-block
       grid-template-columns: min-content
-      grid-auto-rows: repeate(2, min-content)
-      grid-row-gap: 20px
+      grid-auto-rows: repeat (2, min-content)
+      grid-row-gap: 10px
       margin-top: 40px
-      margin-bottom: 40px
+      margin-bottom: 20px
       grid-column-start: 2
       grid-column-end: 3
+      grid-row-start: 1
+      grid-row-end: 2
       align-self: flex-start
       .headeer-block_header_text-block__text
         width: fit-content
@@ -48,3 +53,47 @@
         grid-row-end: 3
         grid-template-columns: repeat(4, min-content)
         grid-template-rows: min-content
+        grid-column-gap: 20px
+        a
+          height: 25px
+          i
+            font-size: 30px
+    .md-display
+      display: block
+      grid-column-start: 2
+      grid-column-end: 3
+      grid-row-start: 2
+      grid-row-end: 3
+    .side-ext-bar
+      display: grid
+      grid-template-columns: repeat (2, 1fr)
+      grid-template-rows: repeat (4, min-content)
+      margin-top: 0
+      padding: 40px
+      grid-row-start: 4
+      grid-row-end: 5
+      grid-column-start: 1
+      grid-column-end: 4
+      grid-gap: 20px
+      a
+        &.btn
+          // margin: 0 auto
+          width: fit-content
+          padding: 18px 50px
+          grid-row-start: 1
+          grid-row-end: 2
+          grid-column-start: 1
+          grid-column-end: 3
+    .main-text-block
+      margin-top: 0
+      margin-bottom: 40px
+      grid-row-start: 3
+      grid-row-end: 4
+      grid-column-start: 2
+      grid-column-end: 3
+      .text-block
+        margin-top: 40px
+        .side-chapter-block
+          margin-top: 0
+        &.lg-desktop
+          display: none
